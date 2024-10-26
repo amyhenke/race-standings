@@ -20,20 +20,21 @@ const Hero = ({ title = "Monaco Grand Prix", date = "24 - 27 Nov 2023", location
                 </Parallax>
 
                 {/* Foreground Image */}
-                <Parallax speed={-20}>
+                <Parallax speed={-5}>
                     <div className="absolute w-screen h-screen bottom-0 left-0">
                         <div className="absolute w-screen h-screen top-0 left-0 inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${foreground})` }} />
                     </div>
                 </Parallax>
 
                 {/* Gradient */}
-                <Parallax speed={-30}>
-                    <div className="gradient absolute bottom-0 left-0 w-screen h-2/5" style={{ gradient }}></div>
+                <Parallax speed={0}>
+                    {/* style={ gradient } */}
+                    <div className="gradient absolute bottom-0 left-0 w-screen h-2/5" style={{ background: 'linear-gradient(180.01deg, rgba(0, 22, 43, 0) 18.83%, #00162B 92.1%)' }}></div>
                 </Parallax>
 
                 {/* Text Container */}
-                <div className="py-20 w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-20 flex flex-col justify-between">
-                    <Parallax speed={-5} className='h-full'>
+                <div className="pt-40 pb-20 w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-20 flex flex-col justify-between">
+                    <Parallax speed={-7} className='h-full'>
                         <div className="flex flex-col justify-between h-full">
                             <h1 className="text-6xl font-extrabold text-white lg:text-9xl md:text-8xl sm:text-7xl">
                                 {title}
