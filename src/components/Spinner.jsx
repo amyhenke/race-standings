@@ -14,7 +14,7 @@ const Spinner = ({ loading }) => {
         size={100}
         aria-label="Loading Spinner"
         data-testid="loader"
-        className='text-blue'
+        className='text-red'
     />
   )
 }

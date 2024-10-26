@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom"
 import logo from '../assets/redbullracing-logo.png'
 
 const NavBar = ({ className }) => {
-    const linkClass = ({ isActive }) => isActive ? "text-white rounded-lg mx-3 my-2 custom-underline-active relative" : "text-white rounded-lg mx-3 my-2 custom-underline relative"
+    const linkClass = ({ isActive }) => isActive ? "text-white rounded-lg mx-3 my-2 custom-underline-active relative uppercase" : "text-white rounded-lg mx-3 my-2 custom-underline relative uppercase"
 
     return (
         // Pass in different bg colour/styles depending on location
