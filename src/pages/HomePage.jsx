@@ -1,9 +1,13 @@
 import React from 'react'
+import Hero from '../components/Hero'
 import Table from '../components/Table'
 
 const HomePage = () => {
   return (
-    <h1>HomePage</h1>
+    <>
+        <Hero />
+        <Table />
+    </>
   )
 }
 

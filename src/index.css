@@ -9,6 +9,16 @@
     --yellow: #fcd700;
 }
 
+#root {
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
 /* Nav Link underline */
 .custom-underline::after {
     content: '';

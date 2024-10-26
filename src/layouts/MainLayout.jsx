@@ -10,7 +10,7 @@ const MainLayout = () => {
 
     return (
         <>
-            <div className={`layout min-h-screen ${isStandingsPage && 'bg-blue'}`}>
+            <div className={`layout min-h-screen w-screen ${isStandingsPage && 'bg-blue'}`}>
                 <NavBar />
                 {/* <NavBar className="bg-red" /> */}
                 <div className="content">
