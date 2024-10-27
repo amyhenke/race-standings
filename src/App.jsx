@@ -6,6 +6,7 @@ import DriversPage from './pages/DriversPage'
 import DriverPage from './pages/DriverPage'
 import NotFoundPage from './pages/NotFoundPage'
 import StandingsPage from './pages/StandingsPage'
+import CardPage, {cardLoader} from './pages/CardPage'
 
 function App() {
   const router = createBrowserRouter(
@@ -13,6 +14,7 @@ function App() {
         <>
             <Route path="/" element={<MainLayout />}>
                 <Route index element={<HomePage />} />
+                <Route path="/card/:slug" element={<CardPage />} loader={cardLoader} />
                 <Route path="/standings" element={<StandingsPage />} />
                 <Route path="/drivers" element={<DriversPage />} />
                 <Route path="/driver/:id" element={<DriverPage />} />

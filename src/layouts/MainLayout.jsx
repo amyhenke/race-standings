@@ -6,11 +6,11 @@ import { Outlet, useLocation } from "react-router-dom"
 
 const MainLayout = () => {
     const location = useLocation()
-    const isStandingsPage = location.pathname === "/standings";
+    const isHomePage = location.pathname === "/";
 
     return (
         <>
-            <div className={`layout min-h-screen w-screen ${isStandingsPage && 'bg-blue'}`}>
+            <div className={`layout min-h-screen w-screen ${isHomePage ? 'bg-transparent' : 'bg-blue'}`}>
                 <NavBar />
                 {/* <NavBar className="bg-red" /> */}
                 <div className="content">

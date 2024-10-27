@@ -1,14 +1,10 @@
 import React from 'react'
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
-import { AiOutlineCalendar } from "react-icons/ai";
-import CountryFlag from './CountryFlag'
-import background from '../assets/hero-background.jpg'
-import foreground from '../assets/hero-foreground.png'
 
-const Hero = ({ title = "Monaco Grand Prix", date = "24 - 27 Nov 2023", location = "Monaco", country_code = "MC" }) => {
+const InnerHero = ({ title, background, foreground }) => {
 
     return (
-        <section className="min-h-screen flex overflow-hidden">
+        <section className="flex overflow-hidden" style={{ minHeight: "50vh" }}>
             <ParallaxProvider>
                 {/* Background Image */}
                 <Parallax speed={5}>
@@ -28,22 +24,12 @@ const Hero = ({ title = "Monaco Grand Prix", date = "24 - 27 Nov 2023", location
                 </Parallax>
 
                 {/* Text Container */}
-                <div className="pt-40 pb-20 w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-20 flex flex-col justify-between">
+                <div className="pt-40 pb-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 flex flex-col justify-between">
                     <Parallax speed={-7} className='h-full'>
                         <div className="flex flex-col justify-between h-full">
-                            <h1 className="text-6xl font-extrabold text-white lg:text-9xl md:text-8xl sm:text-7xl">
+                            <h1 className="text-6xl font-extrabold text-white lg:text-6xl">
                                 {title}
                             </h1>
-                            <div className="details text-white text-xl font-semibold hidden md:block">
-                                <p className="my-4 uppercase flex gap-3">
-                                    <AiOutlineCalendar size={25} />
-                                    {date}
-                                </p>
-                                <p className="my-4 flex gap-3">
-                                    <CountryFlag countryCode={country_code} style={{ width: '25px', margin: '0' }} />
-                                    {location}
-                                </p>
-                            </div>
                         </div>
                     </Parallax>
                 </div>
@@ -53,4 +39,4 @@ const Hero = ({ title = "Monaco Grand Prix", date = "24 - 27 Nov 2023", location
     )
 }
 
-export default Hero 
+export default InnerHero 
