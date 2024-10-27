@@ -2,23 +2,26 @@ import React from 'react'
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 import { AiOutlineCalendar } from "react-icons/ai";
 import CountryFlag from './CountryFlag'
-import background from '../assets/hero-background.jpg'
-import foreground from '../assets/hero-foreground.png'
+import { cloudinary } from '../lib/cloudinary.js'
+import { fill } from '@cloudinary/url-gen/actions/resize';
 
 const Hero = ({ title = "Monaco Grand Prix", date = "24 - 27 Nov 2023", location = "Monaco", country_code = "MC" }) => {
+
+    const cloudinaryBG = cloudinary.image("hero-background_x8wtuh").resize(fill().width(1900)).toURL()
+    const cloudinaryFG = cloudinary.image("hero-foreground_lif4z7").resize(fill().width(1900)).toURL()
 
     return (
         <section className="min-h-screen flex overflow-hidden">
             <ParallaxProvider>
                 {/* Background Image */}
                 <Parallax speed={5}>
-                    <div className="absolute w-screen h-full top-0 left-0 inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${background})` }} />
+                    <div className="absolute w-screen h-full top-0 left-0 inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${cloudinaryBG})` }}></div>
                 </Parallax>
 
                 {/* Foreground Image */}
                 <Parallax speed={-5}>
                     <div className="absolute w-screen h-full bottom-0 left-0">
-                        <div className="absolute w-screen h-full top-0 left-0 inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${foreground})` }} />
+                        <div className="absolute w-screen h-full top-0 left-0 inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${cloudinaryFG})` }} />
                     </div>
                 </Parallax>
 

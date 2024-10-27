@@ -8,7 +8,7 @@ const InnerHero = ({ title, background, foreground }) => {
             <ParallaxProvider>
                 {/* Background Image */}
                 <Parallax speed={5}>
-                    <div className="absolute w-screen h-full top-0 left-0 inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${background})` }} />
+                    <div className="absolute w-screen h-full top-0 left-0 inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${background})` }}></div>
                 </Parallax>
 
                 {/* Foreground Image */}

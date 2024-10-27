@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { cardData } from '../lib/cardData.js'
+import { fetchCardData } from '../lib/fetchData.js'
 import { useLoaderData } from 'react-router-dom'
 import InnerHero from '../components/InnerHero.jsx'
 import background from '../assets/cardrail-background.jpg'
@@ -45,8 +45,19 @@ export const cardLoader = async ({params}) => {
     const { slug } = params
 
     try {
+        const data = await fetchCardData()
+
+        if (!data) {
+            throw new Error("Error fetching card data")
+        }
+
         // find the card which matches the current slug
-        const card = cardData.find((card) => card.slug === slug)
+        const card = data.find((card) => card.slug === slug)
+
+        if (!card) {
+            throw new Error("Card not found")
+        }
+
         return card
     } catch (error) {
         console.error("Card not found")

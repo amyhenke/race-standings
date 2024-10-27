@@ -30,7 +30,7 @@ const NavBar = ({ className }) => {
         // Pass in different bg colour/styles depending on location
         // <nav className={className ? `${className}` : "bg-blue border-b border-blue fixed w-full z-10"}>
         // style={{ backgroundColor: bgColour }}
-        <nav className={`fixed w-full z-10 ${bgColour}`} style={{transition: "background-color 0.3s ease"}}>
+        <nav className={`fixed w-full z-20 ${bgColour}`} style={{transition: "background-color 0.3s ease"}}>
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                 <div className="flex h-20 items-center justify-between">
                     <div
