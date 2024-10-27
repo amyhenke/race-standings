@@ -9,7 +9,7 @@ export const cardData = [
         image: "mediapreview1_tllzrf",
         content: {
             text: "Suspendisse donec feugiat nullam duis quis erat. Fames in tincidunt iaculis amet nibh. Euismod nascetur finibus molestie pretium ligula class integer. Tellus purus taciti; mattis risus non facilisi? Lacus imperdiet aliquam tempor a parturient varius enim dictumst. Mi nibh libero ornare senectus eget egestas curabitur. Cras bibendum habitant odio feugiat, tempor nisi fusce. Fames urna arcu ultricies rutrum ac. Elementum nisl molestie tempus tellus dictumst ad ridiculus. Rhoncus blandit iaculis mattis justo integer.",
-            video: "",
+            video: "Perez_Oracle_Virtual_Laps_oqigev",
         },
     },
     {
@@ -22,6 +22,7 @@ export const cardData = [
         image: "mediapreview2_fxo6zs",
         content: {
             text: "Velit tellus vivamus dignissim sollicitudin primis. Convallis dapibus viverra tempus aliquam montes taciti. Lobortis sociosqu pretium neque efficitur eleifend vitae felis ante inceptos. Donec pretium fringilla mauris non ultricies sem etiam nisi. Adipiscing class aliquam dui ridiculus eros. Finibus quisque nisl vitae, dolor tristique potenti elit? Nibh aptent eros dolor ipsum, tempus cubilia ad magna lectus.",
+            video: "Hannah-Schmitz-Strategy_wvdbr5",
         },
     },
     {

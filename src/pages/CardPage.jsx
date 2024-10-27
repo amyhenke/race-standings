@@ -12,6 +12,8 @@ const CardPage = () => {
     // Resize cloudinary image for optimisation
     const cloudinaryImage = cloudinary.image(card.image).resize(fill().width(400)).toURL()
 
+    const cloudinaryVideo = cloudinary.video(card.content.video).quality("auto").format("auto").toURL();
+
     return (
         <>
         <InnerHero title={card.title} background={`../${background}`} />
@@ -26,6 +28,14 @@ const CardPage = () => {
                     <p>{card.content.text}</p>
                 </div>
             </div>
+            { cloudinaryVideo && (
+                <div className="video-container max-w-screen-lg m-auto mb-20 px-5 md:px-10">
+                    <video width="100%" controls>
+                        <source src={cloudinaryVideo} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            )}
         </section>
         </>
     )

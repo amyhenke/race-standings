@@ -1,6 +1,5 @@
 import React from 'react'
 import Hero from '../components/Hero'
-import Table from '../components/Table'
 import CardRail from '../components/CardRail'
 
 const HomePage = () => {
