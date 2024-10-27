@@ -7,8 +7,8 @@ const HomePage = () => {
   return (
     <>
         <Hero />
-        <section className='p-10 max-w-screen-lg m-auto '>
-            <div className="text">
+        <section className='p-10 pb-40 max-w-screen-lg m-auto'>
+            <div className="text-white">
                 <h2 className='text-5xl font-semibold mb-5'>Egestas pharetra pulvinar consectetur</h2>
                 <p className='mb-2'>Lorem ipsum odor amet, consectetuer adipiscing elit. Inceptos torquent nullam varius praesent penatibus nullam dictumst iaculis hac. Accumsan lorem nunc ex platea amet justo porttitor suspendisse. Commodo diam mi congue platea fusce non in. Magna sit eu in vivamus pharetra magna pharetra. Massa nullam consequat proin quis vehicula feugiat. Fermentum felis at commodo fermentum venenatis taciti semper. Platea amet pellentesque viverra bibendum auctor, maecenas sapien.</p>
                 <p className='mb-2'>Sagittis mollis sodales penatibus conubia suspendisse pharetra consequat mi ridiculus. Varius habitasse dapibus porta ultrices metus; commodo mattis. Egestas pharetra pulvinar consectetur per mattis orci nisl porta non. Erat dictum curabitur ipsum, eu donec maecenas. Posuere tristique morbi duis aenean euismod fermentum? Fringilla ullamcorper dolor auctor cursus; iaculis et. Maximus felis litora commodo porttitor inceptos aliquet duis facilisi. Turpis vitae nascetur mattis gravida at. Commodo non consequat nam elementum hendrerit quam. Vestibulum vivamus venenatis sem, curabitur tincidunt maecenas.</p>

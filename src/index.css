@@ -55,6 +55,12 @@ body {
     scrollbar-width: none;  /* Firefox */
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 /* 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

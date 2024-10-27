@@ -10,7 +10,8 @@ const MainLayout = () => {
 
     return (
         <>
-            <div className={`layout min-h-screen w-screen ${isHomePage ? 'bg-transparent' : 'bg-blue'}`}>
+        {/* ${isHomePage ? 'bg-transparent' : 'bg-blue'} */}
+            <div className={`layout min-h-screen w-screen bg-blue`}>
                 <NavBar />
                 {/* <NavBar className="bg-red" /> */}
                 <div className="content">

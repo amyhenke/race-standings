@@ -24,7 +24,7 @@ const Hero = ({ title = "Monaco Grand Prix", date = "24 - 27 Nov 2023", location
 
                 {/* Gradient */}
                 <Parallax speed={0}>
-                    <div className="gradient absolute bottom-0 left-0 w-screen h-2/5" style={{ background: 'linear-gradient(180.01deg, rgba(0, 22, 43, 0) 18.83%, #00162B 92.1%)' }}></div>
+                    <div className="gradient absolute bottom-0 left-0 w-screen h-2/5" style={{ background: 'linear-gradient(180.01deg, rgba(0, 22, 43, 0) 18.83%, #001a30 92.1%)' }}></div>
                 </Parallax>
 
                 {/* Text Container */}
