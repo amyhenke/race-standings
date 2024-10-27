@@ -7,28 +7,24 @@ import foreground from '../assets/hero-foreground.png'
 
 const Hero = ({ title = "Monaco Grand Prix", date = "24 - 27 Nov 2023", location = "Monaco", country_code = "MC" }) => {
 
-    const gradient = {
-        background: 'linear-gradient(180.01deg, rgba(0, 22, 43, 0) 18.83%, #00162B 92.1%);'
-    }
     return (
         // bg-blue
         <section className="min-h-screen flex overflow-hidden">
             <ParallaxProvider>
                 {/* Background Image */}
                 <Parallax speed={5}>
-                    <div className="absolute w-screen h-screen top-0 left-0 inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${background})` }} />
+                    <div className="absolute w-screen h-full top-0 left-0 inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${background})` }} />
                 </Parallax>
 
                 {/* Foreground Image */}
                 <Parallax speed={-5}>
-                    <div className="absolute w-screen h-screen bottom-0 left-0">
-                        <div className="absolute w-screen h-screen top-0 left-0 inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${foreground})` }} />
+                    <div className="absolute w-screen h-full bottom-0 left-0">
+                        <div className="absolute w-screen h-full top-0 left-0 inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${foreground})` }} />
                     </div>
                 </Parallax>
 
                 {/* Gradient */}
                 <Parallax speed={0}>
-                    {/* style={ gradient } */}
                     <div className="gradient absolute bottom-0 left-0 w-screen h-2/5" style={{ background: 'linear-gradient(180.01deg, rgba(0, 22, 43, 0) 18.83%, #00162B 92.1%)' }}></div>
                 </Parallax>
 

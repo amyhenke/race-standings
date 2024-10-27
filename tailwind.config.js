@@ -18,6 +18,9 @@ export default {
                 "8xl": ["12rem", { lineHeight: "0.8" }],
                 "9xl": ["15rem", { lineHeight: "0.8" }],
             },
+            minHeight: {
+                96: "28rem",
+            },
         },
     },
     plugins: [],
