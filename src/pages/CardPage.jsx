@@ -12,7 +12,7 @@ const CardPage = () => {
     // Resize cloudinary image for optimisation
     const cloudinaryImage = cloudinary.image(card.image).resize(fill().width(400)).toURL()
 
-    const cloudinaryVideo = cloudinary.video(card.content.video).quality("auto").format("auto").toURL();
+    const cloudinaryVideo = cloudinary.video(card.content_video).quality("auto").format("auto").toURL();
 
     return (
         <>
@@ -25,7 +25,7 @@ const CardPage = () => {
                         <div className="category bg-white/[0.2] rounded-lg py-1 px-3">{ card.category }</div>
                         <div className="category">{ card.length } min read</div>
                     </div>
-                    <p>{card.content.text}</p>
+                    <p>{card.content_text}</p>
                 </div>
             </div>
             { cloudinaryVideo && (

@@ -52,7 +52,8 @@ const Table = () => {
                         <tbody>
                             {statsData.slice(0, showFullList ? statsData.length : 10).map(({ first_name, last_name, driver_country_code, season_team_name, season_points }, index) => {
                                 const isLast = index === statsData.length - 1;
-                                const classes = isLast ? "p-4 text-center text-white" : "py-4 md:p-4 text-center text-white border-b border-blue-gray-50 font-normal";
+                                const isFirst = index === 0;
+                                const classes = isLast ? "p-4 text-center text-white" : isFirst ? "py-8 md:p-8 text-center text-white border-b border-blue-gray-50 font-semibold text-lg" : "py-4 md:p-4 text-center text-white border-b border-blue-gray-50 font-normal";
                                 return (
                                     <tr key={index} >
                                         <td className={classes}>
@@ -76,7 +77,7 @@ const Table = () => {
                                             </span>
                                         </td>
                                         <td className={classes}>
-                                            <span className="font-bold text-xl">
+                                            <span className="points font-bold text-xl" aria-points={season_points}>
                                                 {season_points}
                                             </span>
                                         </td>

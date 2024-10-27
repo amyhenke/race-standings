@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { NavLink } from "react-router-dom"
 import logo from '../assets/redbullracing-logo.png'
 
-const NavBar = ({ className }) => {
+const NavBar = () => {
     const linkClass = ({ isActive }) => isActive ? "text-white font-semibold rounded-lg mx-3 my-2 custom-underline-active relative uppercase" : "text-white font-semibold rounded-lg mx-3 my-2 custom-underline relative uppercase"
 
     const [bgColour, setBgColour] = useState("transparent")
@@ -27,10 +27,7 @@ const NavBar = ({ className }) => {
     }, [])
 
     return (
-        // Pass in different bg colour/styles depending on location
-        // <nav className={className ? `${className}` : "bg-blue border-b border-blue fixed w-full z-10"}>
-        // style={{ backgroundColor: bgColour }}
-        <nav className={`fixed w-full z-20 ${bgColour}`} style={{transition: "background-color 0.3s ease"}}>
+        <nav className={`fixed w-full z-20 hidden sm:block ${bgColour}`} style={{transition: "background-color 0.3s ease"}}>
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                 <div className="flex h-20 items-center justify-between">
                     <div
@@ -55,11 +52,11 @@ const NavBar = ({ className }) => {
                                 className={ linkClass }>
                                     Standings
                                 </NavLink>
-                                <NavLink
+                                {/* <NavLink
                                 to="/drivers"
                                 className={ linkClass }>
                                     Drivers
-                                </NavLink>
+                                </NavLink> */}
                             </div>
                         </div>
                     </div>
