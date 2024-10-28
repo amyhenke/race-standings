@@ -13,11 +13,13 @@ function App() {
         <>
             <Route path="/" element={<MainLayout />}>
                 <Route index element={<HomePage />} />
-                <Route path="/card/:slug" element={<CardPage />} loader={cardLoader} />
+                <Route path="/card/:slug" element={<CardPage />} loader={cardLoader} errorElement={<NotFoundPage />} />
+                {/* <Route path="/card/:id" element={<CardPage />} loader={cardLoader} /> */}
                 <Route path="/standings" element={<StandingsPage />} />
-                <Route path="/drivers" element={<DriversPage />} />
-                <Route path="/driver/:id" element={<DriverPage />} />
+                {/* <Route path="/drivers" element={<DriversPage />} />
+                <Route path="/driver/:id" element={<DriverPage />} /> */}
                 <Route path="*" element={<NotFoundPage />} />
+                <Route path="/card/*" element={<NotFoundPage />} />
             </Route>
         </>
     )

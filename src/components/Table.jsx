@@ -5,7 +5,6 @@ import Spinner from './Spinner.jsx';
 
 const Table = () => {
 
-    // !! on mobile hide Nationality and Constructor
     const headings = ["Position", "Driver", "Nationality", "Constructor", "Points"];
 
     const [statsData, setStatsData] = useState([])
@@ -77,7 +76,7 @@ const Table = () => {
                                             </span>
                                         </td>
                                         <td className={classes}>
-                                            <span className="points font-bold text-xl" aria-points={season_points}>
+                                            <span className="points font-bold text-xl">
                                                 {season_points}
                                             </span>
                                         </td>

@@ -11,7 +11,6 @@ const MainLayout = () => {
 
     return (
         <>
-        {/* ${isHomePage ? 'bg-transparent' : 'bg-blue'} */}
             <div className={`layout min-h-screen w-screen bg-blue`}>
                 <NavBar />
                 <MobileNav />

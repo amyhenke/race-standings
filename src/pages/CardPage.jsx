@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { fetchCardData } from '../lib/fetchData.js'
+import { fetchCardData, fetchSingleCardData } from '../lib/fetchData.js'
 import { useLoaderData } from 'react-router-dom'
 import InnerHero from '../components/InnerHero.jsx'
 import background from '../assets/cardrail-background.jpg'
@@ -8,6 +8,7 @@ import { fill } from '@cloudinary/url-gen/actions/resize';
 
 const CardPage = () => {
     const card = useLoaderData()
+    // console.log("CARD DATA:", card)
 
     // Resize cloudinary image for optimisation
     const cloudinaryImage = cloudinary.image(card.image).resize(fill().width(400)).toURL()
@@ -42,25 +43,23 @@ const CardPage = () => {
 }
 
 export const cardLoader = async ({params}) => {
-    const { slug } = params
+    const { id, slug } = params
 
     try {
-        const data = await fetchCardData()
-
-        if (!data) {
-            throw new Error("Error fetching card data")
-        }
+        // const card = await fetchSingleCardData(id)
+        const card = await fetchSingleCardData(slug)
 
         // find the card which matches the current slug
-        const card = data.find((card) => card.slug === slug)
+        // const card = data.find((card) => card.slug === slug)
 
-        if (!card) {
-            throw new Error("Card not found")
+        if (!card || card.length === 0) {
+            throw new Response("Card not found", {status: 404})
         }
 
         return card
     } catch (error) {
-        console.error("Card not found")
+        console.error("Error loading card", error)
+        throw new Response("Card not found", { status: 404 });
     }
 }
 
