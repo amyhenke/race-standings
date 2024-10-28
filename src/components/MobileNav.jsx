@@ -45,7 +45,7 @@ const MobileNav = () => {
                 </div>
             </nav>
             { isOpen &&
-                <nav className='absolute top-0 right-0 w-screen h-screen z-20 bg-blue block sm:hidden'>
+                <nav className='fixed top-0 right-0 w-screen h-screen z-20 bg-blue block sm:hidden'>
                     <div className="flex flex-col h-full w-full flex-1 items-center justify-center md:items-stretch md:justify-start">
                         <CgClose onClick={() => setIsOpen(false)} className='absolute top-8 right-8 text-white' width={40} />
                         <NavLink
